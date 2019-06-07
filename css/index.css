@@ -183,7 +183,9 @@ p {
     padding: 0px;
   }
   .nav-header .nav-header {
-    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .nav-header .nav-header h1 {
     margin: 0px;
@@ -193,7 +195,7 @@ p {
   }
   .nav-header .nav-header nav {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
   }
 }
@@ -223,6 +225,11 @@ footer {
   margin: 20px 2.5%;
   border-radius: 20px;
   height: 100%;
+}
+@media (max-width: 500px) {
+  .home .space-images .sky .launch {
+    visibility: hidden;
+  }
 }
 .home .visit-planets {
   padding: 15px;

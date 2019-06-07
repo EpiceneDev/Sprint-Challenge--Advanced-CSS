@@ -1,6 +1,6 @@
 // Navigation code here
 .nav-header {
-    color: #22283B;
+    @header-font-color;
     background: #f4f4f4;
     padding: 20px 0;
     border: 1px double #e0e0e0;
@@ -12,13 +12,14 @@
     @media @phone {
         padding: 0px;
         .nav-header {
-            flex-direction: column;
+            .flex(center, center);
+
             h1 {
                 margin:0px;
                 .flex(center, center);
             }
             nav {
-                .flex(center, center);
+                .flex(flex-end, center);
             }
 
         
