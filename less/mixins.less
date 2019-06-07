@@ -1,1 +1,23 @@
 // Mixins Here
+
+.flex (@justify, @align){
+	display: flex;
+	justify-content: @justify;
+	align-items: @align;
+}
+
+
+
+.btn {
+    padding: 10px 40px;
+    border-radius: 10px;
+    background-color: rgb(82, 78, 78);
+    color: white;
+    cursor: pointer;
+    
+    &:hover {
+      color:  rgb(82, 78, 78);
+      background-color: white;
+    }
+
+  }
