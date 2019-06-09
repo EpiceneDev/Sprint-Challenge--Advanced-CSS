@@ -1,32 +1,37 @@
-.home {
-    .top-section {
-        width: 100%;
-        padding: 36px 0px;
-        border-bottom: 2px dashed lightgrey;
-        .flex(center, center);
-        h1 {
-            width: 100%; 
-            font-size: x-large;
-            margin: 20px;
-        }   
-        nav {
-            .flex(flex-end, center);
-            width: 100%;
-            a {
-                margin-left: 32px;
-                font-size: 1.6rem;
-                text-decoration: none;
-                color: black;
+
+.top-section {
+    flex-direction: column;
+    width: 100%;
+    
+    
+    .nav-header;
+        
+
+    h1 {
+        .flex(space-around, center);
+        width: 100%; 
+        font-size: 4rem;
+        margin-top: 1.5rem;
+        
+    }   
+    nav {
+        .flex(space-around, center);
+        width: 80%;
+        color: @header-font-color;
+        padding: 1.2rem 0;
+
+        a {
+            .flex(center, center);
+            flex-direction: row;
+            border: 20px;
+            font-size: 1.6rem;
+            text-decoration: none;
+            color: @header-font-color;
+           
+            @media @phone {
+                width: 80%;
+                
             }
-
-
         }
-
-        @media @phone {
-            padding: 0px;
-
-            
-        }
-
     }
 }

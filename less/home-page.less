@@ -11,27 +11,46 @@
     p {
       padding:0 15px;
     }
-  
-  }
-
-  .space-images {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
 
     img {
-      width: 28%;
-      margin: 20px 2.5%;
-      border-radius: 20px;
-      height: 100%;
-
-      &.sky, &.launch {
+      border-radius: 5px;
+      margin-left: 10px;
+      
       @media @phone {
-          visibility: hidden;
-        }
+        justify-content: center;
+        
       }
     }
+  }  
+  .space-images {
+    .flex(center, space-around);
+    flex-wrap: wrap;
+    width: 95%;
+
+    @media @phone {
+      justify-content: center;
+    }
   }
+
+    img {
+      .flex(center, space-between);
+      border-radius: 20px;
+      // height: 100%;
+      // border-top: 50px;
+      // margin-left: 0px;
+      &.launch, &.sky {
+        @media @phone {
+          .hide();
+        }
+      }
+      &.blast {
+        @media @phone {
+          width: 90%;
+
+        }
+      } 
+    }
+     
 
   .visit-planets {
     padding: 15px;
@@ -46,15 +65,27 @@
   }
 
   .walk {
+    
     margin-top: 60px;
     border-top: 1px solid @main-border-color;
     padding: 50px 60px;
     display: flex;
-    justify-content: center;
+    
+
+    @media @phone {
+      width: 100%;
+      flex-direction: column;
+      .flex(center, center);
+      padding: 30px;
+      text-size: 2rem;
+      // margin-bottom: 1px;
+      .flex(center, center);
+      
+    }
 
     .walk-text {
-      width: 50%;
-
+      width: 100%;
+      margin-top: 5px;
       h3 {
         margin-bottom: 10px;
       }
@@ -64,7 +95,16 @@
       }
       
       .button {
+        border: 1rem;
         .btn();
+
+        @media @phone {
+          padding: 30px;
+          text-size: 2rem;
+          margin-bottom: 10px;
+          //border: 1.2rem;
+          
+        }
       }
       
     }
@@ -72,12 +112,19 @@
     .walk-img {
       width: 46%;
       margin-left: 4%;
-      
-      img {
+
+      @media @phone {
+        order: -1;
         width: 100%;
-        height: auto;
-        border-radius: 10px;
       }
-    }
+
+        img {
+          height: 100%;
+          height: auto;
+          border-radius: 10px;
+        }
   }
+
+  }//walk
+
 }// home

@@ -5,6 +5,10 @@
   background-color: #F6F6F6;
   color: #454A59;
   border-color: #F1F1F1;
+  border-bottom: 5px solid lightgrey;
+}
+.hide {
+  display: none;
 }
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -168,39 +172,51 @@ p {
   width: 100%;
   margin: 0 auto;
 }
-.home .top-section {
+.top-section {
+  flex-direction: column;
   width: 100%;
-  padding: 36px 0px;
-  border-bottom: 2px dashed lightgrey;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #F6F6F6;
+  color: #454A59;
+  border-color: #F1F1F1;
+  border-bottom: 5px solid lightgrey;
 }
-.home .top-section h1 {
-  width: 100%;
-  font-size: x-large;
-  margin: 20px;
-}
-.home .top-section nav {
+.top-section h1 {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
   align-items: center;
   width: 100%;
+  font-size: 4rem;
+  margin-top: 1.5rem;
 }
-.home .top-section nav a {
-  margin-left: 32px;
+.top-section nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  color: #23293B;
+  padding: 1.2rem 0;
+}
+.top-section nav a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  border: 20px;
   font-size: 1.6rem;
   text-decoration: none;
-  color: black;
+  color: #23293B;
 }
 @media (max-width: 500px) {
-  .home .top-section {
-    padding: 0px;
+  .top-section nav a {
+    width: 80%;
   }
 }
 footer {
   color: #22283B;
-  background: #f4f4f4;
+  background: #F6F6F6;
   padding: 20px 0;
   border: 1px double #e0e0e0;
   border-radius: 10px;
@@ -208,27 +224,53 @@ footer {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 500px) {
+  footer {
+    margin: 10px;
+  }
+}
 .home .intro h2 {
   padding: 15px;
 }
 .home .intro p {
   padding: 0 15px;
 }
-.home .space-images {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-}
-.home .space-images img {
-  width: 28%;
-  margin: 20px 2.5%;
-  border-radius: 20px;
-  height: 100%;
+.home .intro img {
+  border-radius: 5px;
+  margin-left: 10px;
 }
 @media (max-width: 500px) {
-  .home .space-images img.sky,
-  .home .space-images img.launch {
-    visibility: hidden;
+  .home .intro img {
+    justify-content: center;
+  }
+}
+.home .space-images {
+  display: flex;
+  justify-content: center;
+  align-items: space-around;
+  flex-wrap: wrap;
+  width: 95%;
+}
+@media (max-width: 500px) {
+  .home .space-images {
+    justify-content: center;
+  }
+}
+.home img {
+  display: flex;
+  justify-content: center;
+  align-items: space-between;
+  border-radius: 20px;
+}
+@media (max-width: 500px) {
+  .home img.launch,
+  .home img.sky {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .home img.blast {
+    width: 90%;
   }
 }
 .home .visit-planets {
@@ -245,10 +287,21 @@ footer {
   border-top: 1px solid #dee2e6;
   padding: 50px 60px;
   display: flex;
-  justify-content: center;
+}
+@media (max-width: 500px) {
+  .home .walk {
+    width: 100%;
+    flex-direction: column;
+    padding: 30px;
+    text-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .home .walk .walk-text {
-  width: 50%;
+  width: 100%;
+  margin-top: 5px;
 }
 .home .walk .walk-text h3 {
   margin-bottom: 10px;
@@ -257,22 +310,41 @@ footer {
   margin-bottom: 26px;
 }
 .home .walk .walk-text .button {
-  padding: 10px 40px;
+  border: 1rem;
+  display: flex;
+  justify-content: justify-left;
+  align-items: center;
+  padding: 10px 10px;
   border-radius: 10px;
   background-color: #22283A;
   color: #F6F7F8;
   cursor: pointer;
+  height: 5rem;
+  font-size: 2rem;
 }
 .home .walk .walk-text .button:hover {
   color: #22283A;
   background-color: #F6F7F8;
 }
+@media (max-width: 500px) {
+  .home .walk .walk-text .button {
+    padding: 30px;
+    text-size: 2rem;
+    margin-bottom: 10px;
+  }
+}
 .home .walk .walk-img {
   width: 46%;
   margin-left: 4%;
 }
+@media (max-width: 500px) {
+  .home .walk .walk-img {
+    order: -1;
+    width: 100%;
+  }
+}
 .home .walk .walk-img img {
-  width: 100%;
+  height: 100%;
   height: auto;
   border-radius: 10px;
 }

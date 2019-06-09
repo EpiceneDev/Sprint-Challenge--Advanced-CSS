@@ -9,12 +9,14 @@
 
 
 .btn (@clr: @btn-bg-color){
-    padding: 10px 40px;
+  .flex(justify-left, center);  
+    padding: 10px 10px;
     border-radius: 10px;
     background-color: @clr;
     color: @porcelain;
     cursor: pointer;
-    
+    height: 5rem;
+    font-size: 2rem;
     &:hover {
       color: @clr;
       background-color: @porcelain;
@@ -26,4 +28,9 @@
   background-color: @nav-bg;
   color: @nav-font;
   border-color:  @nav-border;
+  border-bottom: 5px solid lightgrey;
+}
+
+.hide {
+  display: none;
 }
