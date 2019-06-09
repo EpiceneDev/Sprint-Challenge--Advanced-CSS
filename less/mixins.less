@@ -8,22 +8,22 @@
 
 
 
-.btn () {
+.btn (@clr: @btn-bg-color){
     padding: 10px 40px;
     border-radius: 10px;
-    background-color: @btn-bg-color;
+    background-color: @clr;
     color: @porcelain;
     cursor: pointer;
     
     &:hover {
-      color: @btn-bg-color;
+      color: @clr;
       background-color: @porcelain;
     }
+  }
 
-  }
-  .nav-header {
-    flex (center, center);
-    background-color: @nav-bg;
-    color: @nav-font;
-    border-color:  @nav-border;
-  }
+.nav-header {
+  .flex(center, center);
+  background-color: @nav-bg;
+  color: @nav-font;
+  border-color:  @nav-border;
+}
