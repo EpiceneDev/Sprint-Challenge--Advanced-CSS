@@ -1,1 +1,36 @@
 // Mixins Here
+
+.flex (@justify, @align){
+	display: flex;
+	justify-content: @justify;
+	align-items: @align;
+}
+
+
+
+.btn (@clr: @btn-bg-color){
+  .flex(justify-left, center);  
+    padding: 10px 10px;
+    border-radius: 10px;
+    background-color: @clr;
+    color: @porcelain;
+    cursor: pointer;
+    height: 5rem;
+    font-size: 2rem;
+    &:hover {
+      color: @clr;
+      background-color: @porcelain;
+    }
+  }
+
+.nav-header {
+  .flex(center, center);
+  background-color: @nav-bg;
+  color: @nav-font;
+  border-color:  @nav-border;
+  border-bottom: 5px solid lightgrey;
+}
+
+.hide {
+  display: none;
+}
